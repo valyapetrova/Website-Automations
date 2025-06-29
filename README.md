@@ -1,4 +1,4 @@
-# Bubbo Bubbo Test Automation
+# Test Automation for framer app
 
 This repository contains Cypress tests for the website:  
 https://mind-wend-913065.framer.app/
