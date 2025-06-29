@@ -14,7 +14,6 @@ it('7. Should display "Get the app" and "Watch video" buttons stacked on mobile'
 
           // .lte() (“less than or equal”) asserts that the bottom of the first button 
           // sits at or above the top of the second. 
-          // If true, they’re stacked without overlapping, with “Get the app” on top.
           expect(getAppRect.bottom).to.be.lte(watchVideoRect.top);
         });
     });

@@ -15,4 +15,5 @@ it('8. Should display 3D animation after clicking "Click to view in 3D"', () => 
    .invoke('css', 'opacity', '1')
    .should('be.visible') 
 
+   // couldn't finish the test, it's not finding the hovered button
 });

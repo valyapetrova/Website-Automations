@@ -11,7 +11,7 @@ it('3. Should display "visit" button on each card in the components section', ()
     });
 
     cy.get('.components-container')   
-    .find('[data-framer-name="Card Small"]')
+    .find('[data-framer-name="Card Small"]')    //the last card is with different locator
     .scrollIntoView()
     .find('.visit-button')
     .should('be.visible');
