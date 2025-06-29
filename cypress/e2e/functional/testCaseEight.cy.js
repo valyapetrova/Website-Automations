@@ -1,19 +1,22 @@
+import 'cypress-real-events/support'     
+
 it('8. Should display 3D animation after clicking "Click to view in 3D"', () => {
   cy.visit('https://mind-wend-913065.framer.app/');
 
+  cy.viewport(1920, 1080);
 
   cy.get('[data-framer-name="Hero"]')
-    .scrollIntoView()
-    .trigger('mouseover')
+    .realHover();
 
-   cy.get('.3DComponent')
-   .eq(0)
-   .trigger('mouseover')
-   .trigger('mouseenter')      
-   .wait(1200)            
-   .find('.3D-button') 
-   .invoke('css', 'opacity', '1')
-   .should('be.visible') 
+  cy.contains('Click to view in 3D', { timeout: 10_000 })
+    .should('be.visible')
+    .click();
 
-   // couldn't finish the test, it's not finding the hovered button
+  cy.get('iframe')
+    .should('be.visible')
+
+  // Cannot finish the test because it doesn't find canva on the page
+  cy.get('#canvas3d')
+    .and('be.visible')
+    .should('exist')
 });
