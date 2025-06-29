@@ -18,3 +18,11 @@ The spec files are displayed in the 'Specs' tab from the navigation in the left.
 
 You can run them to see if they pass.
 
+3. Test cases location:
+   
+   in the project directory:
+  ### **cypress/e2e/functional**
+
+
+
+
